@@ -25,14 +25,15 @@ Faithfulness in Retrieval-Augmented Generation (RAG) measures how accurately a g
  It is a core metric used in frameworks like **Ragas** and **DeepEval** to assess RAG quality, often using an `LLM-as-a-judge` approach.
  
 
-### High vs. Low Faithfulness Examples
+#### High vs. Low Faithfulness Examples
 
 * Context: "The company was founded in 2020."
 * High Faithfulness: "The company started in 2020." (Supported)
 * Low Faithfulness: "The company was founded in 2025." (Contradicted/Hallucinated) 
 * Medium post: [Ragas vs DeepEval: Measuring Faithfulness and Response Relevancy in RAG Evaluation](https://medium.com/@sjha979/ragas-vs-deepeval-measuring-faithfulness-and-response-relevancy-in-rag-evaluation-2b3a9984bc77)
 
-### Faithfulness vs. Other Metrics
+#### Faithfulness vs. Other Metrics
+
 * Faithfulness checks if the answer is derived only from the context.
 * Answer Relevance checks if the answer addresses the user's question.
 * Answer Correctness checks if the answer is accurate compared to a ground 
