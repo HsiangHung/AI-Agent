@@ -12,12 +12,16 @@ Here we use RAGAS library to evaluate RAG by the following metrics:
 
 by comparing ground truth and response from RAG.
 
-
-Faithfulness in Retrieval-Augmented Generation (RAG) measures how accurately a generated answer is supported by the retrieved context, preventing LLM hallucinations. It ensures that all claims in a response can be inferred from the provided source documents, ranging from 0 to 1, where higher scores indicate better alignment. 
+Here we list three examples to evaluate RAG:
+1. 医疗评估.
+2. Embedding dimensionality vs RAG metrics using data from AI Auto cars challenging.
+3. Optimize RAG performance using data from AI Auto cars challenging.
 
 
 
 ## Faithfulness
+
+Faithfulness in Retrieval-Augmented Generation (RAG) measures how accurately a generated answer is supported by the retrieved context, preventing LLM hallucinations. It ensures that all claims in a response can be inferred from the provided source documents, ranging from 0 to 1, where higher scores indicate better alignment. 
 
 * Groundedness: It determines if the answer is "grounded" in the retrieved content rather than relying on the model's parametric memory.
 * Hallucination Prevention: It directly measures whether the answer contradicts or adds unverified information to the context.
