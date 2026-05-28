@@ -1,6 +1,8 @@
 # Advanced RAG
 
-In practice, Naive RAG might encounter potential retrieval performance issues. The pitfalls could include:
+## Naive RAG Pitfalls
+
+In real-world practice, Naive RAG might encounter many potential retrieval performance issues. The pitfalls could include:
 * Missing content
 * Determine document chunking granularity
 * Missed top ranked
@@ -10,11 +12,15 @@ In practice, Naive RAG might encounter potential retrieval performance issues. T
 * Not extracted
 * Incorrect specificity
 
+Fine-tuning embedding models (for vector database) is a good solution, in particular, for some specific areas or domains. However, before we collect enough data to perform fine-tuning, we can use the following optimization approaches to address the isses in RAG.
 
+## RAG Optimization
 
-To optimize retrieval accuracy, we introduce advanced RAG here. 
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/images/AdvancedRAG_roadmap.png" width="850">
 
-There are three optimization stages in RAG:
+To build an advanced RAG, we can introduce the following approaches:
+
+There are three optimization stages in advanced RAG:
 * Pre-retrieval
     * Indexing
         * Summary Indexing
@@ -29,4 +35,4 @@ There are three optimization stages in RAG:
     * Rerank
     * Context compression 
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/images/AdvancedRAG_roadmap.png" width="850">
+Note to address different pitfalls, the optimization approaches are different.
