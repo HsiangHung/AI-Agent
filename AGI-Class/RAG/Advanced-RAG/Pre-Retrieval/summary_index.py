@@ -1,3 +1,7 @@
+#
+#  Implement summary-indexing optimization in RAG.
+#   * docstore in InMemoryStore
+#
 from langchain_classic.retrievers import MultiVectorRetriever, SelfQueryRetriever
 from langchain_chroma import Chroma
 from langchain_core.stores import InMemoryByteStore
