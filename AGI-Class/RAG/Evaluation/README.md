@@ -3,7 +3,6 @@
 
 <!-- ![eval_RAG_roadmap](https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png) -->
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png" width="800">
 
 Here we use RAGAS library to evaluate RAG by the following metrics:
 
@@ -14,6 +13,8 @@ Here we use RAGAS library to evaluate RAG by the following metrics:
 5. Answer_relevance
 
 by comparing ground truth and response from RAG.
+
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png" width="600">
 
 In this directory, we list three examples to evaluate RAG:
 1. 医疗评估.
