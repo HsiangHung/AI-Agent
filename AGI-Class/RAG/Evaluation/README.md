@@ -1,6 +1,7 @@
 
 # RAG Evaluation
 
+![eval_RAG_roadmap](images/eval_RAG.png)
 
 Here we use RAGAS library to evaluate RAG by the following metrics:
 
@@ -12,7 +13,7 @@ Here we use RAGAS library to evaluate RAG by the following metrics:
 
 by comparing ground truth and response from RAG.
 
-Here we list three examples to evaluate RAG:
+In this directory, we list three examples to evaluate RAG:
 1. 医疗评估.
 2. Embedding dimensionality vs RAG metrics using data from AI Auto cars challenging.
 3. Optimize RAG performance using data from AI Auto cars challenging.
