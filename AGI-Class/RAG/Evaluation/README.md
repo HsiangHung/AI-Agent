@@ -1,9 +1,9 @@
 
 # RAG Evaluation
 
-![eval_RAG_roadmap](https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png)
+<!-- ![eval_RAG_roadmap](https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png) -->
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png" width="400">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png" width="800">
 
 Here we use RAGAS library to evaluate RAG by the following metrics:
 
