@@ -1,10 +1,6 @@
 #
 #
-#  This code demo using RAGAS to evaluate RAG results on 2 questions:
-#    1. context_precision
-#    2. context_recall
-#    3. faithfulness
-#    4. answer_relevance
+#  This code evaluates RAG results on 2 questions but compare embedding = 128, 256, 512
 #
 #  The demo process: 
 #     load data -> split chunks -> load to FAISS -> retrieve contexts 
