@@ -18,7 +18,7 @@ Fine-tuning embedding models (for vector database) is a good solution to improve
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/images/AdvancedRAG_roadmap.png" width="900">
 
-To build an advanced RAG, we can introduce the following optimization approaches. There are three stages to optimize in advanced RAG:
+To build an advanced RAG, we list a variety of optimization approaches below. There are mainly three stages to optimize in advanced RAG:
 * Pre-retrieval
     * Indexing
         * Summary Indexing
