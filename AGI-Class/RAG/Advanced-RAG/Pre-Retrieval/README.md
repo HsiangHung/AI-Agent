@@ -33,6 +33,8 @@ Small chunks are helpful to retrieval, but lost comprehensive contexts. This lea
 
 Parent-child indexing in RAG is a strategy that splits documents into two hierarchical levels: small "child" chunks for precise vector matching, and larger "parent" chunks that are retrieved alongside them to give the LLM better context.
 
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/parent-child-indexing.png" width="700">
+
 #### How It Works
 
 1. Indexing (Storing): You divide a document into larger Parent Chunks (e.g., full sections) and then further subdivide these into smaller Child Chunks (e.g., individual sentences).
