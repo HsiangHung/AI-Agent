@@ -48,7 +48,7 @@ Parent-child indexing in RAG is a strategy that splits documents into two hierar
 
 Pre-question indexing in RAG refers to optimizing how document knowledge is prepared and mapped before a user ever asks a question. Instead of simply chopping text into chunks and creating flat vector embeddings, this pre-computation optimizes the system to bridge the semantic gap between raw text and human queries.
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/pre-question-indexing.png" width="700">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/pre-question-indexing.png" width="750">
 
 
 #### How Prequestion Indexing Works
