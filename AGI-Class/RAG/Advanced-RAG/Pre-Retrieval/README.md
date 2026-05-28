@@ -35,6 +35,9 @@ Parent-child indexing in RAG is a strategy that splits documents into two hierar
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/parent-child-indexing.png" width="700">
 
+* Pron: enhance retrieval accuracy and comprehensive context.
+* Con: more token costs.
+
 #### How It Works
 
 1. Indexing (Storing): You divide a document into larger Parent Chunks (e.g., full sections) and then further subdivide these into smaller Child Chunks (e.g., individual sentences).

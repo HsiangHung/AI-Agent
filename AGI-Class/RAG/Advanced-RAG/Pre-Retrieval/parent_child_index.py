@@ -1,9 +1,10 @@
 #
 #  Implement parent-child-indexing optimization in RAG.
 #   * 'ParentDocumentRetriever' as retriever
-#   * parent chunk_size=1024
-#   * child chunk_size=256
+#   * parent chunk_size=1024, child chunk_size=256
 #   * docstore in InMemoryStore
+#   * doc context on parents, indexing child vectors.
+# 
 #
 from langchain_classic.retrievers import ParentDocumentRetriever
 from langchain_community.document_loaders import TextLoader
