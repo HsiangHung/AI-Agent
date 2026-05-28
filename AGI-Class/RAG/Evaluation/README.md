@@ -14,7 +14,7 @@ Here we use RAGAS library to evaluate RAG by the following metrics:
 
 by comparing ground truth and response from RAG.
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png" width="600">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png" width="700">
 
 In this directory, we list three examples to evaluate RAG:
 1. 医疗评估.
