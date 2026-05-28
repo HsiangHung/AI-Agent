@@ -18,7 +18,10 @@ Pre-retrieval optimization has the following aspects:
 
 Summary Indexing in RAG is an advanced technique where documents or chunks are summarized using an LLM, and the resulting summaries—rather than the raw text—are embedded and stored in the vector database. During retrieval, the system **searches the summaries**, but retrieves the full **original context** for the LLM to generate the final answer.
 
-### How it Works
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/summary-indexing.png" width="700">
+
+
+#### How it Works
 1. Summarization: An LLM generates a dense, high-level semantic summary of a data chunk or entire document.
 2. Indexing: The summary text is converted into a vector embedding and stored in your index.
 3. Retrieval: The system searches the index using query embeddings. When a summary is matched, the full original text linked to that summary is retrieved and passed to the LLM.

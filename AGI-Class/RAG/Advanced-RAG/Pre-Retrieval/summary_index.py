@@ -13,7 +13,6 @@ from langchain_core.prompts import ChatPromptTemplate  # 聊天提示模板
 from langchain_core.runnables import RunnableParallel  # 可运行的映射
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 import os
-from models import get_ali_clients   # 自定义模块，用于获取阿里云大模型和嵌入模型客户端
 
 # 摘要索引示例代码
 
@@ -34,20 +33,13 @@ from models import get_ali_clients   # 自定义模块，用于获取阿里云�
 
 # 获得访问大模型和嵌入模型客户端。
 # 使用阿里百炼的模型
-# client, embeddings_model = get_ali_clients()
+import sys, os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.extend([current_dir, parent_dir])
 
-# 使用硅基流动平台的模型
-client = ChatOpenAI(
-    api_key=os.getenv("SILICONFLOW_API_KEY"),
-    base_url="https://api.siliconflow.cn/v1",
-    model="Pro/MiniMaxAI/MiniMax-M2.5",
-)
-
-embeddings_model = OpenAIEmbeddings(
-    api_key=os.getenv("SILICONFLOW_API_KEY"),
-    base_url="https://api.siliconflow.cn/v1",
-    model="Qwen/Qwen3-Embedding-8B",
-)
+from models import qwen_plus_model as client
+from models import embeddings_model
 
 # 初始化文档加载器
 loader = TextLoader("./Data/deepseek百度百科.txt", encoding="utf-8")
@@ -66,6 +58,17 @@ chain = (
     | client
     | StrOutputParser()  
 )
+"""
+ NOTE we only use the generic promot "总结下面的文档" to generate summary for indexing
+ for specific areas, e.g. medical, we need more persona promot. 
+ For example: 
+   ' 你是一位专业的医药数据分析师。请对以下药品说明书文档块进行精炼总结。
+      要求：
+      1. 保留所有关键医学实体（药品名称、剂量、症状、疾病、禁忌症、不良反应、用法用量等），尤其是【】中的内容。
+      2. 提取核心信息和关键数值数据。
+      ....
+   '
+"""
 print("准备生成文档摘要，请耐心等待...")
 
 # 批量生成文档摘要（最大并发数5）
@@ -95,7 +98,6 @@ retriever = MultiVectorRetriever(
 # 为每个文档生成唯一ID，该ID用于关联原始文档和摘要
 doc_ids = [str(uuid.uuid4()) for _ in docs]
 
-
 # 将文档摘要转换为LangChain中Document
 summary_docs = [
     Document(page_content=s, metadata={id_key: doc_ids[i]})
@@ -113,10 +115,10 @@ print("准备将原始文档存储到字节存储...")
 retriever.docstore.mset(list(zip(doc_ids, docs)))
 
 # 手动测试代码 - 相似性搜索
-# query = "deepseek的企业事件"
-# sub_docs = retriever.vectorstore.similarity_search(query)
-# print("-------------匹配的摘要内容--------------")
-# print(sub_docs[0])
+query = "deepseek的企业事件"
+sub_docs = retriever.vectorstore.similarity_search(query)
+print("-------------匹配的摘要内容--------------")
+print(sub_docs[0])
 #
 # # 获取第一个匹配摘要的ID
 # matched_id = sub_docs[0].metadata[id_key]
