@@ -28,7 +28,16 @@ Summary Indexing in RAG is an advanced technique where documents or chunks are s
 
 ## Parent-child indexing
 
+Small chunks are helpful to retrieval, but lost comprehensive contexts. This leads LLM to have halluciation or generate incomplete answer. Large chunks have better context to generate comprehensive answer for LLM, but noise in embeddings might lead to low-accuracy retrieval. In other words, there is a trade-off among chunk sizes on retrieval and generation.
+
+
 Parent-child indexing in RAG is a strategy that splits documents into two hierarchical levels: small "child" chunks for precise vector matching, and larger "parent" chunks that are retrieved alongside them to give the LLM better context.
+
+#### How It Works
+
+1. Indexing (Storing): You divide a document into larger Parent Chunks (e.g., full sections) and then further subdivide these into smaller Child Chunks (e.g., individual sentences).
+2. Embedding: Only the small Child Chunks are embedded and stored in your vector database, ensuring high-quality, precise similarity searches.
+3. Retrieval: The RAG system runs a similarity search against the Child Chunks. Once it finds the most relevant matches, it looks up their linked Parent Chunks and passes those larger, context-rich blocks to the LLM.
 
 ## Pre-question indexing
 
