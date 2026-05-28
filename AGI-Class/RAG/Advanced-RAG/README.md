@@ -21,12 +21,13 @@ Fine-tuning embedding models (for vector database) is a good solution to improve
 To build an advanced RAG, we list a variety of optimization approaches below. There are mainly three stages to optimize in advanced RAG:
 * Pre-retrieval
     * Indexing
-        * Summary Indexing
+        * **Summary Indexing** Summary indexing is useful for unstructured documents. e.g. tables. 
         * Parent-child indexing
         * Pre-question indexing 
         * Metadata indexing
-    * Search
-        * Multi-query
+    * Retrieval
+        * Enriching retrieval
+        * Multi-query retrieval
     
 * Retrieval
 * Post-retrieval

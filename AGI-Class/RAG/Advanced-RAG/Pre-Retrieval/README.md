@@ -7,15 +7,21 @@ Pre-retrieval optimization has the following aspects:
     * Parent-child indexing
     * Pre-question indexing 
     * Metadata indexing
-* Search
-    * Multi-query
+* Retrieval
+    * Enriching retrieval
+    * Multi-query retrieval
 
 
 # Indexing Optimization
 
 ## Summary Indexing
 
-Summary Indexing in RAG is an advanced technique where documents or chunks are summarized using an LLM, and the resulting summaries—rather than the raw text—are embedded and stored in the vector database. During retrieval, the system searches the summaries, but retrieves the full original context for the LLM to generate the final answer.
+Summary Indexing in RAG is an advanced technique where documents or chunks are summarized using an LLM, and the resulting summaries—rather than the raw text—are embedded and stored in the vector database. During retrieval, the system **searches the summaries**, but retrieves the full **original context** for the LLM to generate the final answer.
+
+### How it Works
+1. Summarization: An LLM generates a dense, high-level semantic summary of a data chunk or entire document.
+2. Indexing: The summary text is converted into a vector embedding and stored in your index.
+3. Retrieval: The system searches the index using query embeddings. When a summary is matched, the full original text linked to that summary is retrieved and passed to the LLM.
 
 ## Parent-child indexing
 
