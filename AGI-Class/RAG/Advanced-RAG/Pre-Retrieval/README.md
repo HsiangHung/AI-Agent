@@ -68,5 +68,8 @@ Metadata indexing involves **tagging** text chunks with descriptive data (e.g., 
 * Embedding: The actual text content is converted into a vector embedding.
 * Indexing: Both the vector and the extracted metadata are stored side-by-side in a vector index (like Pinecone, Weaviate, or ChromaDB)
 
+## Summary
+
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/indexing_opt_summary.png" width="800">
 
 # Search Optimization
