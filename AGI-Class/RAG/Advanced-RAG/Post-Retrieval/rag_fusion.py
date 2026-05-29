@@ -1,22 +1,19 @@
-#Post-Retrieval后检索-重排序RAG-Fusion
-
-
+#
+# Post-Retrieval后检索-重排序RAG-Fusion
+# Correspond to Lecture L2.16
+#
 from langchain_community.vectorstores import Chroma
 from langchain_core.output_parsers import StrOutputParser
 from langchain_classic.load import dumps,loads
 
 from langchain_core.prompts import ChatPromptTemplate
 
-# from models import get_ali_clients
-
-#获得访问大模型和嵌入模型客户端
-# llm,embeddings_model = get_ali_clients()
-
 import sys, os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.extend([current_dir, parent_dir])
 
+#获得访问大模型和嵌入模型客户端
 from models import qwen_plus_model as llm
 from models import embeddings_model
 
