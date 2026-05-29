@@ -26,7 +26,7 @@ from langchain_openai.embeddings.base import OpenAIEmbeddings
 
 # 本地bge-m3模型
 from langchain_ollama import OllamaEmbeddings
-embeddings_model = OllamaEmbeddings(model="bge-m3")
+embeddings_model = OllamaEmbeddings(model="bge-m3:567m")
 
 from models import qwen_plus_model as client
 

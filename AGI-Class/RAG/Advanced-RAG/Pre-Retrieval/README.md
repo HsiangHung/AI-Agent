@@ -54,12 +54,19 @@ Pre-question indexing is useful for when queries in RAG are fixed for specific f
 
 #### How It Works
 
-* Synthetic Generation: During data ingestion, a large language model (LLM) processes your source documents and creates potential questions tht each document chunk is likely to answer.Multi-Vector
-* Embedding: The system embeds these predicted questions (and sometimes the original text) as vectors and stores them in your vector database.
+* Synthetic Generation: During data ingestion, a large language model (LLM) processes your source documents and creates potential questions tht each document chunk is likely to answer.
+* Multi-Vector Embedding: The system embeds these predicted questions (and sometimes the original text) as vectors and stores them in your vector database.
 * Retrieval: When a user asks a question, the retriever matches their query against the indexed prequestions rather than just raw text chunks
 
 ## Metadata indexing
 
-Metadata indexing involves tagging text chunks with descriptive data (e.g., author, date, source, document type) and storing them alongside vector embeddings. This enables targeted pre-retrieval filtering, allowing systems to bypass irrelevant documents and drastically improve search precision
+Metadata indexing involves **tagging** text chunks with descriptive data (e.g., **author**, **date**, **source**, **document type**) and storing them alongside vector embeddings. This enables targeted pre-retrieval **filtering**, allowing systems to bypass irrelevant documents and drastically improve search precision.
+
+#### How It Works
+
+* Extraction: As documents are parsed into chunks, an LLM or a rule-based parser extracts **identifying metadata**.
+* Embedding: The actual text content is converted into a vector embedding.
+* Indexing: Both the vector and the extracted metadata are stored side-by-side in a vector index (like Pinecone, Weaviate, or ChromaDB)
+
 
 # Search Optimization
