@@ -13,7 +13,7 @@ Con: Reranking will slow down RAG.
 
 ## RAG-Fusion
 
-RAG-Fusion is an advanced search methodology that improves traditional Retrieval-Augmented Generation (RAG) by tackling the limitations of single-shot queries. Instead of asking the database one question, it uses a Large Language Model (LLM) to generate **multiple diverse queries**, retrieves documents for each, and applies **Reciprocal Rank Fusion** (RRF) to aggregate the best results.
+RAG-Fusion is an advanced search methodology that improves traditional RAG by tackling the limitations of single-shot queries. Instead of asking the database one question, it uses a Large Language Model (LLM) to generate **multiple diverse queries** (from different angels based on the original query), retrieves documents for each, and applies **Reciprocal Rank Fusion** (RRF) to aggregate the best results.
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Post-Retrieval/images/RAG_fusion.png" width="900">
 
@@ -21,6 +21,24 @@ The RRF is defined as
 
 $$\textrm{RRF}(d \in D)= \sum_{r \in R} \frac{1}{k+r(d)}.$$
 
-where $D$ represents the given documents to be ranked, and a set of rankings $R$ has a permutation on $1, \cdots D$, and the $k$ is a smooth paramter, usually set to 60.
+where $D$ represents the given documents to be ranked, and a set of rankings $R$ has a permutation on $1, \cdots D$, and the $k$ is a smooth paramter, often set to 60. [RAG Fusion: Redefining Search Using Multi-Query Retrieval and Reranking](https://ai.gopubby.com/rag-fusion-redefining-search-using-multi-query-retrieval-and-reranking-88da68783d26)
+
+The top-ranked retrieved documents will be then sent to the LLM along with all the queries to generate a response.
+
+#### Pros:
+* Enhanced Accuracy
+* Improved Contextual Understanding and Increased Diversity: Multiple queries can capture an in-depth understanding of the user’s intent and generating contextually relevant responses.
+* Effective for Global Questions: It can retrieve and summarize relevant information from diverse perspectives.
+
+#### Cons
+
+* Slower Response Time: LLM generating multiple queries, retrieving documents for the multiple queries, reranking the retrieved documents using RRF, and finally, LLM-based response generation, leads to longer response times from receiving the query to outputting the answer compared to traditional RAG.
+* Computationally expensive: Multiple calls to the LLM required for generating multiple queries and, finally, to summarize the reranked retrieved answers, making RAG Fusion computationally expensive.
+
+
+
+
+Slower Response Time: RAG Fusion’s multi-step process, which involves multiple query generation using LLM, retrieving documents for the multiple queries, reranking the retrieved documents using RRF, and finally, LLM-based response generation, leads to longer response times from receiving the query to outputting the answer compared to traditional RAG.
+Computationally expensive: There are multiple calls to the LLM required for generating multiple queries and, finally, to summarize the reranked retrieved answers, making RAG Fusion computationally expensive.
 
 ## Context Compression and Filtering
