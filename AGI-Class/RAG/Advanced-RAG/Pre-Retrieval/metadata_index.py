@@ -1,7 +1,7 @@
 #
 #  Implement metadata-indexing optimization in RAG.
-#   * 
-#   * 
+#   * Metadata can be given by human or LLM
+#   * Using filter={"$and": [{"year": 2023}, {"rating": 9.8}]}) to filter before retrieval
 # 
 from langchain_community.query_constructors.chroma import ChromaTranslator
 from langchain_community.vectorstores import Chroma
@@ -78,14 +78,14 @@ vectorstore = Chroma.from_documents(docs, embeddings_model)
 # retriever = vectorstore.as_retriever(search_kwargs={"filter": {"year": 2023}})
 # print(retriever.invoke("文章"))
 
-# retriever = vectorstore.as_retriever()
-# print(retriever.invoke("文章", filter={"year": 2023}))
-# print(retriever.invoke("文章", filter={"$and": [{"year": 2023}, {"rating": 9.8}]}))
-# print(retriever.invoke("文章", filter={"$and": [{"year": 2023}, {"rating": {"$gt": 8.8}}]}))
+retriever = vectorstore.as_retriever()
+print(retriever.invoke("文章", filter={"year": 2023}))
+print(retriever.invoke("文章", filter={"$and": [{"year": 2023}, {"rating": 9.8}]}))
+print(retriever.invoke("文章", filter={"$and": [{"year": 2023}, {"rating": {"$gt": 8.8}}]}))
 
 # 过滤器符号：$gt, $gte, $lt, $lte, $eq, $ne; $and, $or, $in, $nin
 
-# exit()
+exit()
 
 
 # 元数据字段定义（指导LLM如何解析查询条件）
