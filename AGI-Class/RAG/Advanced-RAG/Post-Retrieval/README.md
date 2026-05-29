@@ -13,7 +13,9 @@ Con: Reranking will slow down RAG.
 
 ## RAG-Fusion
 
-RAG-Fusion is an advanced search methodology that improves traditional Retrieval-Augmented Generation (RAG) by tackling the limitations of single-shot queries. Instead of asking the database one question, it uses a Large Language Model (LLM) to generate multiple diverse queries, retrieves documents for each, and applies **Reciprocal Rank Fusion** (RRF) to aggregate the best results.
+RAG-Fusion is an advanced search methodology that improves traditional Retrieval-Augmented Generation (RAG) by tackling the limitations of single-shot queries. Instead of asking the database one question, it uses a Large Language Model (LLM) to generate **multiple diverse queries**, retrieves documents for each, and applies **Reciprocal Rank Fusion** (RRF) to aggregate the best results.
+
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Post-Retrieval/images/RAG_fusion.png" width="900">
 
 The RRF is defined as  
 
