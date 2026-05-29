@@ -1,3 +1,6 @@
+#
+# NOTE once this db_init.py has been run and data are inserted, later run will fail.
+#
 import pymysql
 from datetime import datetime
 

@@ -9,8 +9,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.tools import tool
 
 
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 import sys
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -96,6 +96,32 @@ tools = [ask_database]
 agent = create_tool_calling_agent(qwen_model, tools, prompt)
 
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
-# result = agent_executor.invoke({"input": "查询一班的学生数学成绩是多少？"})
-result = agent_executor.invoke({"input": "所有学生的数学平均成绩是多少？"})
+result = agent_executor.invoke({"input": "查询一班的学生数学成绩是多少？"})
+# result = agent_executor.invoke({"input": "所有学生的数学平均成绩是多少？"})
 print(result)
+
+
+"""
+Benchmark results:
+
+1. "查询一班的学生数学成绩是多少？":
+
+Invoking: `ask_database` with `{'query': "SELECT s.name, sc.score FROM Students s JOIN Scores sc ON s.student_id = sc.student_id JOIN Classes c ON s.class_id = c.class_id WHERE c.class_name = '一班' AND sc.subject = '数学';"}`
+
+(('张三', 85.5), ('李四', 78.0))一班的学生数学成绩如下：
+
+- 张三：85.5分
+- 李四：78分
+
+> Finished chain.
+{'input': '查询一班的学生数学成绩是多少？', 'output': '一班的学生数学成绩如下：\n\n- 张三：85.5分\n- 李四：78分'}
+
+-----------------------------------------------------------------
+2. "所有学生的数学平均成绩是多少？":
+
+Invoking: `ask_database` with `{'query': "SELECT AVG(score) AS average_math_score FROM Scores WHERE subject = '数学';"}`
+
+((85.16666666666667,),)所有学生的数学平均成绩是 85.17（四舍五入到小数点后两位）。
+> Finished chain.
+{'input': '所有学生的数学平均成绩是多少？', 'output': '所有学生的数学平均成绩是 85.17（四舍五入到小数点后两位）。'}
+"""
