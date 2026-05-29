@@ -21,7 +21,7 @@ The RRF is defined as
 
 $$\textrm{RRF}(d)= \sum^N_{r=1} \frac{1}{k+r_i(d)}.$$
 
-where $d$ represents a document, $N$ is a number of queries, and the $k$ is a smooth paramter, often set to 60. $r_i(d)$ stands the ranking of document $d$ on query-$i$. See detail: [RAG Fusion: Redefining Search Using Multi-Query Retrieval and Reranking](https://ai.gopubby.com/rag-fusion-redefining-search-using-multi-query-retrieval-and-reranking-88da68783d26)
+where $d$ represents a document, $N$ is a number of queries, and the $k$ is a smooth paramter, often set to 60. $r_i(d)$ stands the ranking of document $d$ on $i$-th query. See detail: [RAG Fusion: Redefining Search Using Multi-Query Retrieval and Reranking](https://ai.gopubby.com/rag-fusion-redefining-search-using-multi-query-retrieval-and-reranking-88da68783d26)
 
 The top-ranked retrieved documents will be then sent to the LLM along with all the queries to generate a response.
 
