@@ -21,7 +21,7 @@ Summary Indexing in RAG is an advanced technique where documents or chunks are s
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/summary-indexing.png" width="700">
 
 
-#### How it Works
+#### How It Works
 1. Summarization: An LLM generates a dense, high-level semantic summary of a data chunk or entire document.
 2. Indexing: The summary text is converted into a vector embedding and stored in your index.
 3. Retrieval: The system searches the index using query embeddings. When a summary is matched, the full original text linked to that summary is retrieved and passed to the LLM.
@@ -50,10 +50,11 @@ Pre-question indexing in RAG refers to optimizing how document knowledge is prep
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/pre-question-indexing.png" width="750">
 
+Pre-question indexing is useful for when queries in RAG are fixed for specific formats, e.g. FAQ in products.
 
-#### How Prequestion Indexing Works
+#### How It Works
 
-* Synthetic Generation: During data ingestion, a large language model (LLM) processes your source documents and creates potential questions that each document chunk is likely to answer.Multi-Vector
+* Synthetic Generation: During data ingestion, a large language model (LLM) processes your source documents and creates potential questions tht each document chunk is likely to answer.Multi-Vector
 * Embedding: The system embeds these predicted questions (and sometimes the original text) as vectors and stores them in your vector database.
 * Retrieval: When a user asks a question, the retriever matches their query against the indexed prequestions rather than just raw text chunks
 
