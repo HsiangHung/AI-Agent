@@ -37,3 +37,5 @@ The top-ranked retrieved documents will be then sent to the LLM along with all t
 
 
 ## Context Compression and Filtering
+
+Context compression and filtering are techniques to remove noise and redundancies. This drastically reduce API costs, accelerate processing speeds, and prevent the model from getting distracted by irrelevant details.
