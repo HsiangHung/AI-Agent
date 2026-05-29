@@ -85,7 +85,7 @@ print(retriever.invoke("文章", filter={"$and": [{"year": 2023}, {"rating": {"$
 
 # 过滤器符号：$gt, $gte, $lt, $lte, $eq, $ne; $and, $or, $in, $nin
 
-exit()
+# exit()
 
 
 # 元数据字段定义（指导LLM如何解析查询条件）
