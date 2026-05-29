@@ -86,7 +86,7 @@ pretty_print_docs(doc_BM25Retriever)
 # retrievers 列表，表示检索器列表 归一化RAG Fusion
 ensembleRetriever = EnsembleRetriever(
     retrievers=[BM25_retriever, vector_retriever],
-    weights=[0.5, 0.5],
+    weights=[0.5, 0.5], # this is the 0.5:0.5 weight between BM25 and vector retrieval
     ).with_config({"run_name": "MyEnsemble"}) | (lambda x: x[:3])
 
 retriever_doc = ensembleRetriever.invoke(question)
