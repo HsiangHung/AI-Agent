@@ -2,6 +2,7 @@
 #  Implement metadata-indexing optimization in RAG.
 #   * Metadata can be given by human or LLM
 #   * Using filter={"$and": [{"year": 2023}, {"rating": 9.8}]}) to filter before retrieval
+#   * Or qeury has implicit metadata filter conditions
 # 
 from langchain_community.query_constructors.chroma import ChromaTranslator
 from langchain_community.vectorstores import Chroma
