@@ -1,15 +1,14 @@
 
 # Post-Retrieval Optimization
 
+There are several strategies to optimize post-retreieval stage:
 * Rerank
 * RAG-Fusion
 * Context compression and filtering
 
 ## Rerank
 
-For some specific domains, if retrieval performance and accuracy are highly required, reranking is important.
-
-Con: Reranking will slow down RAG.
+For some specific domains, if retrieval performance and accuracy are highly required, reranking is important and helpful. But the disadvantage of reranking will slow down RAG-retrieval.
 
 ## RAG-Fusion
 
