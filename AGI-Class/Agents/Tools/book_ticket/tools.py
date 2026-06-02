@@ -8,14 +8,15 @@ def check_tick(date, start, end):
     print('开始访问12306接口:',date, start, end)
     url = 'https://kyfw.12306.cn/otn/leftTicket/queryG?leftTicketDTO.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}&purpose_codes=ADULT'.format(
         date, start, end)
+
     headers = {
         "Accept": "*/*",
         "Accept-Language": "zh-CN,zh;q=0.9",
         "Cache-Control": "no-cache",
         "Connection": "keep-alive",
         "If-Modified-Since": "0",
-        "Referer": "https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=^%^E4^%^B8^%^8A^%^E6^%^B5^%^B7,SHH&ts=^%^E5^%^8C^%^97^%^E4^%^BA^%^AC,BJP&date=2025-07-03&flag=N,N,Y",
-        "Sec-Fetch-Dest": "empty",
+        "Referer": "^B8^%^8A^%^E6^%^B5^%^B7,SHH&ts=^%^E5^%^8C^%^97^%^E4^%^BA^%^AC,BJP&date=2025-07-03&flag=N,N,Y",
+        "Sec-Fetch-Dest": "empty",https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=^%^E4^%
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.97 Safari/537.36 SE 2.X MetaSr 1.0",
@@ -43,8 +44,18 @@ def check_tick(date, start, end):
     session = requests.session()
     res = session.get(url, headers=headers, cookies=cookies)
 
-    data = res.json()
-    print('12306接口返回，并准备后续处理:', data)
+    # ct = res.headers.get("Content-Type","")
+    # if "application/json" not in ct:
+    #     print("Non-JSON response:", ct)
+    #     print(res.text[:2000])   # inspect HTML
+    # else:
+    #     data = res.json()
+
+    # return
+    # data = res.json()
+    # print('12306接口返回，并准备后续处理:', data)
+
+    # print("OK????")
 
     # 这是一个列表
     result = data["data"]["result"]
