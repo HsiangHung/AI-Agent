@@ -70,7 +70,7 @@ Metadata indexing involves **tagging** text chunks with descriptive data (e.g., 
 
 ## Summary
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/summary_indexing.png" width="850">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/indexing_opt_summary.png" width="850">
 
 # Search Optimization
 
