@@ -95,4 +95,6 @@ The generation of multi-queries is similar pre-question indexing. However, pre-q
 
 ## Decomposition
 
-Decomposition retrieval is an advanced AI technique in Retrieval-Augmented Generation (RAG) where a Large Language Model breaks a complex, multi-faceted user query into smaller, answerable sub-questions. Each sub-question retrieves targeted documents, ensuring high-precision results for complex, multi-hop reasoning.
+Decomposition retrieval is an advanced AI technique in Retrieval-Augmented Generation (RAG) where a Large Language Model breaks a **complex**, **multi-faceted user query** into **smaller**, answerable sub-questions. Each sub-question retrieves targeted documents, ensuring high-precision results for complex, multi-hop reasoning.
+
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/decomposition_workflow.png" width="800">
