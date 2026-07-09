@@ -76,7 +76,7 @@ Metadata indexing involves **tagging** text chunks with descriptive data (e.g., 
 
 ## Enriching
 
-Enriching retrieval in Retrieval-Augmented Generation (RAG) systems transforms basic vector searches into highly precise, context-aware information retrieval. By optimizing the data pipeline and embedding models, you can minimize hallucinations and deliver deeply grounded answers.
+Enriching technique in Retrieval-Augmented Generation (RAG) systems transforms basic vector searches into highly precise, context-aware information retrieval. By optimizing the data pipeline and embedding models, you can minimize hallucinations and deliver deeply grounded answers.
 
 In many cases, user may have **vague** questions, which will lead hallucinations. Thus enriching retrieval keeps communication with users to get more comprehensive quesiton understanding and then move on.
 
@@ -85,7 +85,7 @@ In many cases, user may have **vague** questions, which will lead hallucinations
 
 ## Multi-Query
 
-Multi-Query RAG is an advanced retrieval technique that uses a Language Model (LLM) to automatically **rewrite a single user query into multiple semantically similar** variants. This expands retrieval across the vector space, capturing nuanced context that a standard search might miss.
+Multi-Query technique is an advanced retrieval technique that uses a Language Model (LLM) to automatically **rewrite a single user query into multiple semantically similar** variants. This expands retrieval across the vector space, capturing nuanced context that a standard search might miss.
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/multi_query_workflow.png" width="800">
 
@@ -95,6 +95,8 @@ The generation of multi-queries is similar pre-question indexing. However, pre-q
 
 ## Decomposition
 
-Decomposition retrieval is an advanced AI technique in Retrieval-Augmented Generation (RAG) where a Large Language Model breaks a **complex**, **multi-faceted user query** into **smaller**, answerable sub-questions. Each sub-question retrieves targeted documents, ensuring high-precision results for complex, multi-hop reasoning.
+Decomposition technique is an advanced AI technique in Retrieval-Augmented Generation (RAG) where a Large Language Model breaks a **complex**, **multi-faceted user query** into **smaller**, answerable sub-questions. Each sub-question retrieves targeted documents, ensuring high-precision results for complex, multi-hop reasoning.
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/decomposition_workflow.png" width="900">
+
+LLM can implement COT idea to decompose complex questions.
