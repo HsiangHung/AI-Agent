@@ -85,9 +85,9 @@ In many cases, user may have **vague** questions, which will lead hallucinations
 
 ## Multi-Query
 
-Multi-Query RAG is an advanced retrieval technique that uses a Language Model (LLM) to automatically rewrite a single user query into multiple semantically similar variants. This expands retrieval across the vector space, capturing nuanced context that a standard search might miss.
+Multi-Query RAG is an advanced retrieval technique that uses a Language Model (LLM) to automatically **rewrite a single user query into multiple semantically similar** variants. This expands retrieval across the vector space, capturing nuanced context that a standard search might miss.
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/multi_query_workflow.png" width="900">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/multi_query_workflow.png" width="800">
 
 
 
