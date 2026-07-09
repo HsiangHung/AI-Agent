@@ -89,7 +89,9 @@ Multi-Query RAG is an advanced retrieval technique that uses a Language Model (L
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/multi_query_workflow.png" width="800">
 
+This optimization is also used when users have vague questions.
 
+The generation of multi-queries is similar pre-question indexing. However, pre-question index optimization is used to generate multiple questions given a **context chunk**, and multi-query optimization is based on users' questions.
 
 ## Decomposition
 
