@@ -12,7 +12,7 @@ Pre-retrieval optimization has the following aspects:
     * Multi-query retrieval
 
 
-# Indexing Optimization
+# Indexing Optimization (索引优化)
 
 ## Summary Indexing
 
@@ -72,7 +72,7 @@ Metadata indexing involves **tagging** text chunks with descriptive data (e.g., 
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/indexing_opt_summary.png" width="900">
 
-# Search Optimization
+# Retrieval Optimization (查询优化)
 
 ## Enriching
 
