@@ -18,7 +18,7 @@ Pre-retrieval optimization has the following aspects:
 
 Summary Indexing in RAG is an advanced technique where documents or chunks are summarized using an LLM, and the resulting summaries—rather than the raw text—are embedded and stored in the vector database. During retrieval, the system **searches the summaries**, but retrieves the full **original context** for the LLM to generate the final answer.
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/summary-indexing.png" width="700">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/summary_indexing.png" width="700">
 
 
 #### How It Works
@@ -33,7 +33,7 @@ Small chunks are helpful to retrieval, but lost comprehensive contexts. This lea
 
 Parent-child indexing in RAG is a strategy that splits documents into two hierarchical levels: small "child" chunks for precise vector matching, and larger "parent" chunks that are retrieved alongside them to give the LLM better context.
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/parent-child-indexing.png" width="700">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/parent_child_indexing.png" width="700">
 
 * Pron: enhance retrieval accuracy and comprehensive context.
 * Con: more token costs.
@@ -48,7 +48,7 @@ Parent-child indexing in RAG is a strategy that splits documents into two hierar
 
 Pre-question indexing in RAG refers to optimizing how document knowledge is prepared and mapped before a user ever asks a question. Instead of simply chopping text into chunks and creating flat vector embeddings, this pre-computation optimizes the system to bridge the semantic gap between raw text and human queries.
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/pre-question-indexing.png" width="750">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/pre_question_indexing.png" width="750">
 
 Pre-question indexing is useful for when queries in RAG are fixed for specific formats, e.g. FAQ in products.
 
@@ -77,6 +77,11 @@ Metadata indexing involves **tagging** text chunks with descriptive data (e.g., 
 ## Enriching
 
 Enriching retrieval in Retrieval-Augmented Generation (RAG) systems transforms basic vector searches into highly precise, context-aware information retrieval. By optimizing the data pipeline and embedding models, you can minimize hallucinations and deliver deeply grounded answers.
+
+In many cases, user may have vague questions, which will lead hallucinations. Thus enriching retrieval keeps communication with users to get more comprehensive quesiton understanding and then move on.
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Optimizaton/images/dynamic_batching.png" width="700">
+
 
 ## Multi-Query
 
