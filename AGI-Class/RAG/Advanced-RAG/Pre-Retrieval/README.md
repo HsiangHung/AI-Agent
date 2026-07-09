@@ -80,7 +80,7 @@ Enriching retrieval in Retrieval-Augmented Generation (RAG) systems transforms b
 
 In many cases, user may have vague questions, which will lead hallucinations. Thus enriching retrieval keeps communication with users to get more comprehensive quesiton understanding and then move on.
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/enriching_workflow.png" width="800">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Advanced-RAG/Pre-Retrieval/images/enriching_workflow.png" width="900">
 
 
 ## Multi-Query
