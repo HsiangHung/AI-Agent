@@ -6,7 +6,8 @@
 
 We used to evaluate RAG in the following aspects and the corresponding metrics:
 
-* **Retriever Evaluation**: Measure if the FAISS vector database is actually fetching the right chunks of data for query.
+* **Retriever Evaluation**: 
+Measure if the FAISS vector database is actually fetching the right chunks of data for query.
     * Context relevance
     * Context precision
     * Context recall
