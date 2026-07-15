@@ -71,7 +71,8 @@ Faithfulness in Retrieval-Augmented Generation (RAG) measures how accurately a g
 
 ## Metric Criterion
 
-There are no standard threshold values for the evaluation metrics. 
+There are no standard threshold values for the evaluation metrics. It all depends on our business use cases and goal.
+
 Here we just list the reference values of evaluation metrics:
 
 | metric | high | medium | low |
@@ -83,9 +84,9 @@ Here we just list the reference values of evaluation metrics:
 
 The suggested troubleshooting and solution are listed
 
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/RAG_evaluation_solution.png" width="700">
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/RAG_evaluation_solution.png" width="900">
 
-However, we should note that depending on business domains and goals, the threshold requirements ae different. 
+As we emphasized above, we should note that depending on business domains and goals, the threshold values are different. Therefore we need to fine tune our RAG to satisfy our business goal.
 
 For example:
 
@@ -99,5 +100,3 @@ For example:
     * Answer Relevancy ≥ 0.7, Context Recall ≥ 0.7
     * Keep answer relevance and also diversity
 
-
-<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/RAG_evaluation_solution.png" width="700">
