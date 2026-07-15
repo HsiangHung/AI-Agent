@@ -67,3 +67,13 @@ Faithfulness in Retrieval-Augmented Generation (RAG) measures how accurately a g
 * Faithfulness checks if the answer is derived only from the context.
 * Answer Relevance checks if the answer addresses the user's question.
 * Answer Correctness checks if the answer is accurate compared to a ground 
+
+
+## Metric Criterion
+
+| metric | high | medium | low |
+| --- | --- | --- | --- |
+| context_recall | ≥ 0.8| 0.5 ~ 0.8 | < 0.5 |
+| context_precision | ≥ 0.7 | 0.4 ~ 0.7 | < 0.4 |
+| faithfulness | ≥ 0.9 | 0.7 ~ 0.9 | < 0.7 | 
+| answer_relevancy | ≥ 0.9 | 0.7 ~ 0.9 | < 0.7|
