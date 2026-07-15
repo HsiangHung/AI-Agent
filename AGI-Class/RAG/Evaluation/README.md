@@ -4,20 +4,25 @@
 <!-- ![eval_RAG_roadmap](https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png) -->
 
 
-Here we use RAGAS library to evaluate RAG by the following metrics:
+Here we use RAGAS library to evaluate RAG by the following aspects and the corresponding metrics:
 
-1. Context relevance
-2. Context precision
-3. Context recall
-4. Faithfulness
-5. Answer_relevance
+* Retrieval
+    * Context relevance
+    * Context precision
+    * Context recall
+* Generation
+    * Faithfulness
+    * Answer_relevance
 
 by comparing ground truth and response from RAG.
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png" width="700">
 
+
+
+
 In this directory, we list three examples to evaluate RAG:
-1. 医疗评估.
+1. Medical Evaluation (医疗评估).
 2. Embedding dimensionality vs RAG metrics using data from AI Auto cars challenging.
 3. Optimize RAG performance using data from AI Auto cars challenging.
 
