@@ -1,5 +1,5 @@
-# Agents
+# AI Agents
 
 ## Definition 
 
-Agent = LLM + Planning + Memory + Tool Use
+Agent = LLM + Planning + Memory + Tool
