@@ -6,11 +6,11 @@
 
 We used to evaluate RAG in the following aspects and the corresponding metrics:
 
-* **Retriever Evaluation**
+* **Retriever Evaluation**: Measure if the FAISS vector database is actually fetching the right chunks of data for query.
     * Context relevance
     * Context precision
     * Context recall
-* **Generation Evaluation**
+* **Generation Evaluation**: Measure whether the LLM's generated answer is strictly supported by the retrieved context, for anti-hallucination.
     * Faithfulness
     * Answer_relevance
 
