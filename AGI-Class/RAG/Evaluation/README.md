@@ -28,7 +28,10 @@ To evaluate RAG, we plug into the following into **RAGAS**:
 4. Reference Answer: Ground truth, annotated by human.
 
 
+## Examples
+
 In this directory, we list three examples to evaluate RAG:
+
 1. Medical Evaluation (医疗评估).
 2. Embedding dimensionality vs RAG metrics using data from AI Auto cars challenging.
 3. Optimize RAG performance using data from AI Auto cars challenging.
