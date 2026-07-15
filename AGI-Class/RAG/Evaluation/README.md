@@ -21,7 +21,7 @@ Measure whether the LLM's generated answer is strictly supported by the retrieve
 * Faithfulness
 * Answer_relevance
 
-by comparing ground truth and response from RAG.
+RAG evaluation is by comparing ground truth and response from RAG.
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png" width="700">
 
