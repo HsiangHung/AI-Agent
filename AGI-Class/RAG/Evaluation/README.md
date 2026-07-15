@@ -4,7 +4,7 @@
 <!-- ![eval_RAG_roadmap](https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/eval_RAG.png) -->
 
 
-We used to evaluate RAG by the following aspects and the corresponding metrics:
+We used to evaluate RAG in the following aspects and the corresponding metrics:
 
 * Retrieval
     * Context relevance
@@ -23,9 +23,9 @@ Here we focus on evaluation using **RAGAS** library.
 
 To evaluate RAG, we plug into the following into **RAGAS**:
 1. Question
-2. Answer: Outcome from RAG with LLM.
-3. Context: Outcome from retrieval.
-4. Reference Answer: Ground truth answer, annotated by human.
+2. Answer: Reponse from RAG.
+3. Context: Outcome from retrieval (before LLM).
+4. Reference Answer: Ground truth, annotated by human.
 
 
 In this directory, we list three examples to evaluate RAG:
