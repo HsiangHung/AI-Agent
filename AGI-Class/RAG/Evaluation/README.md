@@ -90,13 +90,13 @@ As we emphasized above, we should note that depending on business domains and go
 
 For example:
 
-* Medical/low (high risk):
+* Medical/law (high risk):
     - Faithfulness ≥ 0.9,Context Recall ≥ 0.9
     - Any missing info and hallucination will lead to severe results
 * Customer/suppport/Consulting:
     * Answer Relevancy ≥ 0.8,Context Precision ≥ 0.7
     * Answers are highly relevant to question query, and reduce noise
-* Q/A
+* Q/A chatbot
     * Answer Relevancy ≥ 0.7, Context Recall ≥ 0.7
     * Keep answer relevance and also diversity
 
