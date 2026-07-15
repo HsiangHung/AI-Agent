@@ -6,11 +6,11 @@
 
 We used to evaluate RAG in the following aspects and the corresponding metrics:
 
-* Retrieval
+* **Retriever Evaluation**
     * Context relevance
     * Context precision
     * Context recall
-* Generation
+* **Generation Evaluation**
     * Faithfulness
     * Answer_relevance
 
