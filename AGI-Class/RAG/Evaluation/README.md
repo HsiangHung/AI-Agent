@@ -71,9 +71,33 @@ Faithfulness in Retrieval-Augmented Generation (RAG) measures how accurately a g
 
 ## Metric Criterion
 
+There are no standard threshold values for the evaluation metrics. 
+Here we just list the reference values of evaluation metrics:
+
 | metric | high | medium | low |
 | --- | --- | --- | --- |
 | context_recall | ≥ 0.8| 0.5 ~ 0.8 | < 0.5 |
 | context_precision | ≥ 0.7 | 0.4 ~ 0.7 | < 0.4 |
 | faithfulness | ≥ 0.9 | 0.7 ~ 0.9 | < 0.7 | 
 | answer_relevancy | ≥ 0.9 | 0.7 ~ 0.9 | < 0.7|
+
+The suggested troubleshooting and solution are listed
+
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/RAG_evaluation_solution.png" width="700">
+
+However, we should note that depending on business domains and goals, the threshold requirements ae different. 
+
+For example:
+
+* Medical/low (high risk):
+    - Faithfulness ≥ 0.9,Context Recall ≥ 0.9
+    - Any missing info and hallucination will lead to severe results
+* Customer/suppport/Consulting:
+    * Answer Relevancy ≥ 0.8,Context Precision ≥ 0.7
+    * Answers are highly relevant to question query, and reduce noise
+* Q/A
+    * Answer Relevancy ≥ 0.7, Context Recall ≥ 0.7
+    * Keep answer relevance and also diversity
+
+
+<img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/RAG_evaluation_solution.png" width="700">
