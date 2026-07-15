@@ -86,17 +86,17 @@ The suggested troubleshooting and solution are listed
 
 <img src="https://github.com/HsiangHung/AI-Agent/blob/main/AGI-Class/RAG/Evaluation/images/RAG_evaluation_solution.png" width="900">
 
-As we emphasized above, we should note that depending on business domains and goals, the threshold values are different. Therefore we need to fine tune our RAG to satisfy our business goal.
+As we emphasized above, we should note that depending on business domains and goals, the evaluation metric thresholds are different. Therefore we need to fine tune our RAG to satisfy our business goal.
 
 For example:
 
 * Medical/law (high risk):
-    - Faithfulness ≥ 0.9,Context Recall ≥ 0.9
-    - Any missing info and hallucination will lead to severe results
+    - Faithfulness ≥ 0.9, Context Recall ≥ 0.9.
+    - Any missing info and hallucination will lead to severe results.
 * Customer/suppport/Consulting:
-    * Answer Relevancy ≥ 0.8,Context Precision ≥ 0.7
-    * Answers are highly relevant to question query, and reduce noise
+    * Answer Relevancy ≥ 0.8, Context Precision ≥ 0.7.
+    * Answers are highly relevant to question query, and reduce noise.
 * Q/A chatbot
-    * Answer Relevancy ≥ 0.7, Context Recall ≥ 0.7
-    * Keep answer relevance and also diversity
+    * Answer Relevancy ≥ 0.7, Context Recall ≥ 0.7.
+    * Keep answer relevance and also diversity.
 
